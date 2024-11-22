@@ -9,8 +9,9 @@ import state from '../store/index'
 const Shirt = () => {
   const snap = useSnapshot(state)
   const { nodes, materials } = useGLTF("/shirt_baked.glb")
-  // const logotexture = useTexture(snap.islogoTexture)
-  // const fulltexture = useTexture(snap.isfulldecol)
+  console.log(nodes , materials)
+  const logotexture = useTexture(snap.islocalDecal)
+  const fulltexture = useTexture(snap.isfulldecol)
   return (
     <group>
       <mesh
